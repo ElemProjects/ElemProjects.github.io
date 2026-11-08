@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RINGAN – Keripik Tempe Renyah Dukung UMKM Indonesia</title>
+<meta name="description" content="Keripik tempe renyah, ringan, dan gurih dalam 4 rasa. Setiap pembelian ikut mendukung UMKM Indonesia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green-900:#0f3d22;
+  --green-700:#1a5c33;
+  --green-500:#2f9e4f;
+  --green-400:#4cc36a;
+  --yellow:#ffd21f;
+  --yellow-soft:#fff3b0;
+  --cream:#fffaf0;
+  --ink:#0b2a17;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden;line-height:1.6}
+.display{font-family:'Bowlby One',sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.02}
+.wrap{max-width:1150px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:14px 0;transition:.3s}
+nav.scrolled{background:rgba(15,61,34,.95);backdrop-filter:blur(8px);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Bowlby One';color:var(--yellow);font-size:1.4rem;text-decoration:none}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:#fff;text-decoration:none;font-weight:600;font-size:.92rem}
+.nav-links a:hover{color:var(--yellow)}
+.btn-nav{background:var(--yellow);color:var(--green-900)!important;padding:8px 18px;border-radius:99px}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
+  background:
+   radial-gradient(circle at 15% 20%,rgba(76,195,106,.55),transparent 45%),
+   radial-gradient(circle at 90% 80%,rgba(255,210,31,.18),transparent 40%),
+   linear-gradient(135deg,var(--green-900),var(--green-700) 60%,var(--green-500))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding-top:110px;padding-bottom:70px}
+.badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:6px 16px;border-radius:99px;font-size:.85rem;font-weight:600;margin-bottom:22px}
+.hero h1{font-size:clamp(3.4rem,10vw,7.6rem);color:var(--yellow);
+  text-shadow:4px 4px 0 var(--green-900),8px 8px 0 rgba(0,0,0,.25)}
+.hero h1 span{display:block;color:#fff;font-size:.42em;margin-top:10px;text-shadow:3px 3px 0 var(--green-900)}
+.hero p{font-size:1.15rem;max-width:520px;margin:26px 0 34px;color:#e9ffe9}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:99px;font-weight:700;text-decoration:none;font-size:1rem;transition:.25s;border:3px solid var(--yellow)}
+.btn-yellow{background:var(--yellow);color:var(--green-900);box-shadow:0 6px 0 #b89300}
+.btn-yellow:hover{transform:translateY(3px);box-shadow:0 3px 0 #b89300}
+.btn-ghost{color:var(--yellow);background:transparent}
+.btn-ghost:hover{background:var(--yellow);color:var(--green-900)}
+.hero-art{position:relative;aspect-ratio:1;max-width:520px;width:100%;justify-self:center}
+.hero-art .blob{position:absolute;inset:6%;background:var(--yellow);border-radius:58% 42% 55% 45%/48% 55% 45% 52%;animation:morph 9s ease-in-out infinite;box-shadow:0 0 0 14px rgba(255,210,31,.25)}
+.hero-art .plate{position:absolute;left:5%;right:5%;bottom:12%;width:90%}
+.hero-art .c1,.hero-art .c2,.hero-art .c3{position:absolute;animation:float 5s ease-in-out infinite}
+.c1{width:52%;left:12%;top:14%}
+.c2{width:44%;right:6%;top:30%;animation-delay:-1.5s!important}
+.c3{width:38%;left:30%;top:50%;animation-delay:-3s!important}
+@keyframes float{50%{transform:translateY(-14px) rotate(4deg)}}
+@keyframes morph{50%{border-radius:42% 58% 45% 55%/55% 45% 55% 45%}}
+.hero-wave{position:absolute;bottom:-1px;left:0;width:100%;line-height:0}
+
+/* MARQUEE */
+.marquee{background:var(--yellow);color:var(--green-900);padding:14px 0;overflow:hidden;white-space:nowrap;border-block:4px solid var(--green-900)}
+.marquee div{display:inline-block;animation:scroll 22s linear infinite;font-family:'Bowlby One';font-size:1.2rem}
+.marquee span{margin:0 26px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+section{padding:96px 0}
+.section-title{text-align:center;margin-bottom:56px}
+.section-title h2{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--green-700)}
+.section-title h2 em{font-style:normal;background:var(--yellow);padding:0 14px;border-radius:12px;color:var(--green-900)}
+.section-title p{max-width:560px;margin:14px auto 0;color:#3d5a47}
+
+/* PRODUK */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{border-radius:26px;overflow:hidden;color:#fff;display:flex;flex-direction:column;box-shadow:0 14px 30px rgba(0,0,0,.18);transition:.3s;position:relative}
+.card:hover{transform:translateY(-10px) rotate(-1deg)}
+.card .top{padding:26px 22px 0;flex:1}
+.card h3{font-family:'Bowlby One';font-weight:400;font-size:2rem;line-height:1}
+.card .rasa{font-weight:700;letter-spacing:2px;font-size:.9rem;margin:8px 0 12px;opacity:.95}
+.card p{font-size:.88rem;opacity:.92}
+.card .visual{display:flex;justify-content:center;padding:14px 10px 0}
+.card .visual svg{width:92%;filter:drop-shadow(0 10px 8px rgba(0,0,0,.3))}
+.card .foot{display:flex;justify-content:space-between;align-items:center;padding:14px 20px 20px}
+.price{background:rgba(0,0,0,.28);padding:6px 16px;border-radius:99px;font-weight:700}
+.card .buy{background:#fff;color:#111;text-decoration:none;font-weight:700;font-size:.85rem;padding:8px 16px;border-radius:99px}
+.card .buy:hover{background:var(--yellow)}
+.k{background:linear-gradient(160deg,#1d3a2d 0%,#1d3a2d 50%,#c9a24b 50%)}
+.o{background:linear-gradient(160deg,#18214a 0%,#18214a 50%,#9a7660 50%)}
+.p{background:linear-gradient(160deg,#3d1420 0%,#3d1420 50%,#b5543b 50%)}
+.b{background:linear-gradient(160deg,#47230f 0%,#47230f 50%,#d98c3f 50%)}
+.k .rasa{color:var(--yellow)}
+
+/* MANFAAT */
+.manfaat{background:var(--green-900);color:#fff;position:relative}
+.manfaat .section-title h2{color:var(--yellow)}
+.manfaat .section-title h2 em{background:#fff}
+.manfaat .section-title p{color:#c6e8cf}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.ben{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:30px 24px;transition:.3s}
+.ben:hover{background:rgba(255,210,31,.12);border-color:var(--yellow);transform:translateY(-6px)}
+.ben .ico{font-size:2.4rem;width:64px;height:64px;display:grid;place-items:center;background:var(--yellow);border-radius:18px;margin-bottom:18px}
+.ben h3{font-size:1.15rem;color:var(--yellow);margin-bottom:8px}
+.ben p{font-size:.9rem;color:#d7efdd}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;text-align:center}
+.stat b{display:block;font-family:'Bowlby One';font-size:clamp(2.4rem,5vw,3.8rem);color:var(--yellow);font-weight:400}
+.stat span{font-size:.9rem;color:#c6e8cf}
+
+/* CTA */
+.cta{background:var(--yellow);text-align:center;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(2.8rem,8vw,6rem);color:var(--green-900);text-shadow:4px 4px 0 #fff}
+.cta p{max-width:560px;margin:22px auto 36px;font-size:1.1rem;color:var(--green-900);font-weight:500}
+.btn-wa{background:var(--green-900);color:#fff;border-color:var(--green-900);font-size:1.15rem;padding:18px 38px;box-shadow:0 7px 0 #000}
+.btn-wa:hover{transform:translateY(4px);box-shadow:0 3px 0 #000}
+.cta .deco{position:absolute;width:200px;opacity:.5}
+.cta .d1{left:-40px;top:30px;transform:rotate(-20deg)}
+.cta .d2{right:-30px;bottom:20px;transform:rotate(25deg)}
+footer{background:var(--green-900);color:#b9dcc3;text-align:center;padding:28px 20px;font-size:.88rem}
+
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.35);animation:pulse 2s infinite}
+.wa-float svg{width:32px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+.reveal{opacity:0;transform:translateY(40px);transition:.8s}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .grid,.benefits{grid-template-columns:repeat(2,1fr)}
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero p{margin-inline:auto}.cta-row{justify-content:center}
+  .nav-links a:not(.btn-nav){display:none}
+}
+@media(max-width:560px){
+  .grid,.benefits,.stats{grid-template-columns:1fr}
+  section{padding:70px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- Ilustrasi SVG (original) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="chip" viewBox="0 0 200 170">
+      <path d="M20 80C15 40 60 10 105 15C150 10 190 40 183 85C190 125 150 160 100 158C55 165 12 130 20 80Z" fill="var(--chip,#e9c46a)" stroke="var(--edge,#b98a2c)" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M50 80C48 55 75 35 105 40C135 36 160 55 155 82C160 108 135 130 103 128C72 132 47 108 50 80Z" fill="var(--inner,#f6e3a0)" opacity=".9"/>
+      <g fill="var(--bean,#b98a2c)"><circle cx="45" cy="60" r="9"/><circle cx="150" cy="110" r="10"/><circle cx="60" cy="125" r="7"/><circle cx="165" cy="58" r="7"/><circle cx="105" cy="148" r="6"/></g>
+      <g fill="var(--speck,#f4b400)"><circle cx="80" cy="60" r="3.5"/><circle cx="110" cy="75" r="3"/><circle cx="130" cy="58" r="3.5"/><circle cx="95" cy="98" r="3"/><circle cx="125" cy="100" r="3.5"/><circle cx="70" cy="85" r="3"/><circle cx="140" cy="82" r="3"/><circle cx="105" cy="55" r="2.5"/></g>
+      <g fill="#5b3a1a"><circle cx="90" cy="75" r="2"/><circle cx="118" cy="88" r="2"/><circle cx="75" cy="105" r="2"/><circle cx="135" cy="70" r="2"/><circle cx="102" cy="112" r="2"/></g>
+    </symbol>
+    <symbol id="plate" viewBox="0 0 300 70">
+      <ellipse cx="150" cy="38" rx="146" ry="30" fill="#c9a37c"/>
+      <ellipse cx="150" cy="32" rx="130" ry="24" fill="#e3c9a0"/>
+    </symbol>
+    <symbol id="stack" viewBox="0 0 300 220">
+      <use href="#plate" x="0" y="150" width="300" height="70"/>
+      <use href="#chip" x="10" y="70" width="140" height="119"/>
+      <use href="#chip" x="150" y="78" width="130" height="110"/>
+      <use href="#chip" x="70" y="20" width="160" height="136"/>
+    </symbol>
+  </defs>
+</svg>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo">RINGAN</a>
+    <div class="nav-links">
+      <a href="#produk">Produk</a>
+      <a href="#manfaat">Manfaat</a>
+      <a href="#beli" class="btn-nav">Pesan</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="badge">🌱 Dibuat dari kedelai pilihan · Produk UMKM Lokal</span>
+      <h1 class="display">Ringan<span>Keripik Tempe</span></h1>
+      <p>Tipis, renyah, dan gurih di setiap gigitan. Keripik tempe buatan tangan pengrajin lokal dengan bumbu pilihan, camilan sehat yang cocok menemani harimu.</p>
+      <div class="cta-row">
+        <a href="#produk" class="btn btn-yellow">Lihat Rasa 😋</a>
+        <a href="https://wa.me/628990367123?text=Halo%2C%20saya%20mau%20pesan%20Keripik%20Tempe%20Ringan" target="_blank" rel="noopener" class="btn btn-ghost">Pesan via WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="blob"></div>
+      <svg class="plate" viewBox="0 0 300 70"><use href="#plate"/></svg>
+      <svg class="c1" viewBox="0 0 200 170"><use href="#chip"/></svg>
+      <svg class="c2" viewBox="0 0 200 170" style="--chip:#e0a458;--inner:#f3d9a0;--speck:#d62828;--edge:#a8641f"><use href="#chip"/></svg>
+      <svg class="c3" viewBox="0 0 200 170" style="--chip:#f0cf72;--inner:#fbeab4"><use href="#chip"/></svg>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" width="100%" height="70"><path d="M0 40C240 100 480 0 720 40S1200 90 1440 30V90H0Z" fill="#ffd21f"/></svg>
+  </div>
+</header>
+
+<div class="marquee"><div>
+  <span>★ RENYAH</span><span>★ GURIH</span><span>★ RINGAN</span><span>★ BUATAN LOKAL</span><span>★ DUKUNG UMKM</span><span>★ RENYAH</span><span>★ GURIH</span><span>★ RINGAN</span><span>★ BUATAN LOKAL</span><span>★ DUKUNG UMKM</span>
+  <span>★ RENYAH</span><span>★ GURIH</span><span>★ RINGAN</span><span>★ BUATAN LOKAL</span><span>★ DUKUNG UMKM</span><span>★ RENYAH</span><span>★ GURIH</span><span>★ RINGAN</span><span>★ BUATAN LOKAL</span><span>★ DUKUNG UMKM</span>
+</div></div>
+
+<!-- PRODUK -->
+<section id="produk">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <h2 class="display">Pilih <em>Rasamu</em></h2>
+      <p>Empat varian rasa, satu kerenyahan yang sama. Mana favoritmu?</p>
+    </div>
+    <div class="grid">
+      <article class="card k reveal">
+        <div class="top"><h3>Ringan</h3><div class="rasa">RASA KEJU</div><p>Gurih keju yang lembut dan creamy, favorit anak-anak maupun dewasa.</p></div>
+        <div class="visual"><svg viewBox="0 0 300 220" style="--chip:#e9c46a;--inner:#f6e3a0;--speck:#f4b400;--edge:#b98a2c"><use href="#stack"/></svg></div>
+        <div class="foot"><span class="price">IDR 17K</span><a class="buy" target="_blank" rel="noopener" href="https://wa.me/628990367123?text=Halo%2C%20saya%20mau%20pesan%20Keripik%20Tempe%20Rasa%20Keju">Beli</a></div>
+      </article>
+      <article class="card o reveal">
+        <div class="top"><h3>Ringan</h3><div class="rasa" style="color:#ffd21f">RASA ORIGINAL</div><p>Rasa asli tempe yang gurih alami, cocok buat teman makan nasi atau ngemil santai.</p></div>
+        <div class="visual"><svg viewBox="0 0 300 220" style="--chip:#e5b95c;--inner:#f2dea8;--speck:#d9b25a;--edge:#b98a2c"><use href="#stack"/></svg></div>
+        <div class="foot"><span class="price">IDR 15K</span><a class="buy" target="_blank" rel="noopener" href="https://wa.me/628990367123?text=Halo%2C%20saya%20mau%20pesan%20Keripik%20Tempe%20Rasa%20Original">Beli</a></div>
+      </article>
+      <article class="card p reveal">
+        <div class="top"><h3>Ringan</h3><div class="rasa" style="color:#ffd21f">RASA PEDAS</div><p>Pedas gurih yang nendang, bikin nagih dan susah berhenti di satu keping.</p></div>
+        <div class="visual"><svg viewBox="0 0 300 220" style="--chip:#e0a458;--inner:#f3d9a0;--speck:#d62828;--edge:#a8641f"><use href="#stack"/></svg></div>
+        <div class="foot"><span class="price">IDR 15K</span><a class="buy" target="_blank" rel="noopener" href="https://wa.me/628990367123?text=Halo%2C%20saya%20mau%20pesan%20Keripik%20Tempe%20Rasa%20Pedas">Beli</a></div>
+      </article>
+      <article class="card b reveal">
+        <div class="top"><h3>Ringan</h3><div class="rasa" style="color:#ffd21f">RASA BALADO</div><p>Bumbu balado khas Minang: manis, pedas, dan gurih berpadu sempurna.</p></div>
+        <div class="visual"><svg viewBox="0 0 300 220" style="--chip:#d9993f;--inner:#ebc07a;--speck:#e4572e;--edge:#9c5a1c"><use href="#stack"/></svg></div>
+        <div class="foot"><span class="price">IDR 17K</span><a class="buy" target="_blank" rel="noopener" href="https://wa.me/628990367123?text=Halo%2C%20saya%20mau%20pesan%20Keripik%20Tempe%20Rasa%20Balado">Beli</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MANFAAT -->
+<section class="manfaat" id="manfaat">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <h2 class="display">Camilan yang <em>Menguatkan</em> UMKM</h2>
+      <p>Setiap bungkus keripik tempe yang kamu beli adalah dukungan nyata untuk ekonomi rakyat Indonesia.</p>
+    </div>
+    <div class="benefits">
+      <div class="ben reveal"><div class="ico">👩‍🍳</div><h3>Buka Lapangan Kerja</h3><p>Diproduksi oleh pengrajin dan ibu-ibu rumahan di sekitar kita, membuka peluang kerja langsung di lingkungan lokal.</p></div>
+      <div class="ben reveal"><div class="ico">🌾</div><h3>Bahan Baku Lokal</h3><p>Kedelai dan bumbu dibeli dari pemasok lokal sehingga manfaat ekonominya mengalir sampai ke petani.</p></div>
+      <div class="ben reveal"><div class="ico">🔄</div><h3>Uang Berputar di Negeri Sendiri</h3><p>Belanja produk lokal menjaga perputaran uang di daerah dan memperkuat ekonomi masyarakat.</p></div>
+      <div class="ben reveal"><div class="ico">🏆</div><h3>Warisan Kuliner Bangsa</h3><p>Tempe adalah warisan kuliner Indonesia. Dengan membelinya, kamu ikut melestarikan dan membawanya naik kelas.</p></div>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b data-count="64">0</b><span>Juta pelaku UMKM di Indonesia*</span></div>
+      <div class="stat"><b data-count="60" data-suffix="%">0</b><span>Kontribusi UMKM terhadap PDB*</span></div>
+      <div class="stat"><b data-count="97" data-suffix="%">0</b><span>Penyerapan tenaga kerja oleh UMKM*</span></div>
+    </div>
+    <p style="text-align:center;font-size:.75rem;color:#8fbf9d;margin-top:18px">*Angka perkiraan umum, silakan sesuaikan dengan data terbaru.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="beli">
+  <svg class="deco d1" viewBox="0 0 200 170"><use href="#chip"/></svg>
+  <svg class="deco d2" viewBox="0 0 200 170" style="--chip:#e0a458;--speck:#d62828"><use href="#chip"/></svg>
+  <div class="wrap reveal" style="position:relative">
+    <h2 class="display">Support UMKM!<br>Beli Produk Ini</h2>
+    <p>Sekali beli, kamu dapat camilan renyah sekaligus membantu pengrajin lokal terus berkarya. Yuk pesan sekarang!</p>
+    <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/628990367123?text=Halo%2C%20saya%20mau%20pesan%20Keripik%20Tempe%20Ringan">
+      <svg width="24" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.600L3 29l7.100-2.100A12.800 12.800 0 0 0 16 28c7 0 12.700-5.600 12.700-12.500S23 3 16 3Zm0 23c-1.900 0-3.800-.5-5.400-1.500l-.4-.2-4.200 1.200 1.200-4-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.300 9.900 10.100 5.300 16 5.300s10.700 4.600 10.700 10.200S21.900 26 16 26Zm5.900-7.600c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.600 8.600 0 0 1-4.300-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.2.200 2.100 3.200 5.100 4.500 1.900.8 2.600.9 3.600.7.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4Z"/></svg>
+      Pesan via WhatsApp
+    </a>
+    <p style="margin-top:22px;font-size:.95rem">📱 0899-0367-123</p>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> RINGAN Keripik Tempe · Bangga Produk Lokal Indonesia 🇮🇩</footer>
+
+<a class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp" href="https://wa.me/628990367123?text=Halo%2C%20saya%20mau%20pesan%20Keripik%20Tempe%20Ringan">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.600L3 29l7.100-2.100A12.800 12.800 0 0 0 16 28c7 0 12.700-5.600 12.700-12.500S23 3 16 3Zm5.900 15.400c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.600 8.600 0 0 1-4.300-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.2.200 2.100 3.200 5.100 4.500 1.900.8 2.600.9 3.600.7.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4Z"/></svg>
+</a>
+
+<script>
+  // nav background on scroll
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  // reveal on scroll
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+  // counters
+  const co=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target,end=+el.dataset.count,suf=el.dataset.suffix||'';let n=0;
+    const t=setInterval(()=>{n+=Math.ceil(end/40);if(n>=end){n=end;clearInterval(t)}el.textContent=n+suf},35);
+    co.unobserve(el);
+  }),{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
